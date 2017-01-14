@@ -4,10 +4,10 @@ body, html {
 }
 
 @font-face { font-family: 'title';
-             src: url('../fonts/title.ttf') format('truetype'); }
+             src: url('LearnLooper/assets/fonts/title.ttf') format('truetype'); }
 
 @font-face { font-family: 'main';
-             src: url('../fonts/CaviarDreams.ttf') format('truetype'); }
+             src: url('LearnLooper/assets/fonts/CaviarDreams.ttf') format('truetype'); }
 
 .spacer {
  background-color: #ccc;
@@ -19,7 +19,7 @@ body, html {
 
 .parallax1 {
     /* The image used */
-    background-image: url("../assets/images/bg_underconstruction_white.jpg");
+    background-image: url("LearnLooper/assets/images/bg_underconstruction_white.jpg");
 
     /* Full height */
     min-height: 100%; 
@@ -34,7 +34,7 @@ body, html {
 
 .parallax2 {
     /* The image used */
-    background-image: url("../assets/images/bg_underconstruction.jpg");
+    background-image: url("LearnLooper/assets/images/bg_underconstruction.jpg");
 
     position: relative;
     display: block;
