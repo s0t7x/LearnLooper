@@ -1,0 +1,72 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+@font-face { font-family: 'title';
+             src: url('../fonts/title.ttf') format('truetype'); }
+
+@font-face { font-family: 'main';
+             src: url('../fonts/CaviarDreams.ttf') format('truetype'); }
+
+.spacer {
+ background-color: #ccc;
+ min-height: 10px;
+ width: 100%;
+ position: relative;
+ display: block;
+}
+
+.parallax1 {
+    /* The image used */
+    background-image: url("../assets/images/bg_underconstruction_white.jpg");
+
+    /* Full height */
+    min-height: 100%; 
+    display: block;
+    position:relative;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("../assets/images/bg_underconstruction.jpg");
+
+    position: relative;
+    display: block;
+    /* Full height */
+    min-height: 50%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn {
+  -webkit-border-radius: 2;
+  -moz-border-radius: 2;
+  border-radius: 2px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 31px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
