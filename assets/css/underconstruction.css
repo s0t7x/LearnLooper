@@ -4,10 +4,10 @@ body, html {
 }
 
 @font-face { font-family: 'title';
-             src: url('assets/fonts/title.ttf') format('truetype'); }
+             src: url('../fonts/title.ttf') format('truetype'); }
 
 @font-face { font-family: 'main';
-             src: url('assets/fonts/CaviarDreams.ttf') format('truetype'); }
+             src: url('../fonts/CaviarDreams.ttf') format('truetype'); }
 
 .spacer {
  background-color: #ccc;
