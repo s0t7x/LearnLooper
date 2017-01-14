@@ -19,7 +19,7 @@ body, html {
 
 .parallax1 {
     /* The image used */
-    background-image: url("assets/images/bg_underconstruction_white.jpg");
+    background-image: url("../images/bg_underconstruction_white.jpg");
 
     /* Full height */
     min-height: 100%; 
@@ -34,7 +34,7 @@ body, html {
 
 .parallax2 {
     /* The image used */
-    background-image: url("assets/images/bg_underconstruction.jpg");
+    background-image: url("../images/bg_underconstruction.jpg");
 
     position: relative;
     display: block;
