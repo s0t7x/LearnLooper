@@ -7,12 +7,12 @@ var App = angular.module('app', ['ngRoute'])
 
     $routeProvider
     .when('/', {
-        templateUrl: '/views/test.html',
+        templateUrl: './views/test.html',
         controller: 'Overview',
         title: "Overview"
       })
       .when('/about-us', {
-        templateUrl: '/views/about.html',
+        templateUrl: './views/about.html',
         controller: 'ViewCtrl',
         title: "about"
       })
