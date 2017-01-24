@@ -7,7 +7,7 @@ var App = angular.module('app', ['ngRoute'])
 
     $routeProvider
     .when('/', {
-        templateUrl: './views/test.html',
+        templateUrl: './views/nice.html',
         controller: 'Overview',
         title: "Overview"
       })
