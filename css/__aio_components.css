@@ -1,0 +1,73 @@
+
+/*
+* Appery.io side-menu component.
+*/
+ion-side-menu.menu {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.buttons .button-full,
+.buttons .button-block {
+	margin: 0;
+}
+.aio-empty-screen {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	overflow-y: auto;
+}
+.aio-empty-screen:not(.has-header):not(.has-tabs-top) {
+	top: 0;
+}
+.aio-empty-screen:not(.has-footer):not(.has-tabs) {
+	bottom: 0;
+}
+.aio-empty-screen {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	overflow-y: auto;
+}
+.aio-empty-screen:not(.has-header):not(.has-tabs-top) {
+	top: 0;
+}
+.aio-empty-screen:not(.has-footer):not(.has-tabs) {
+	bottom: 0;
+}
+.aio-empty-screen {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	overflow-y: auto;
+}
+.aio-empty-screen:not(.has-header):not(.has-tabs-top) {
+	top: 0;
+}
+.aio-empty-screen:not(.has-footer):not(.has-tabs) {
+	bottom: 0;
+}
+.aio-empty-screen {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	overflow-y: auto;
+}
+.aio-empty-screen:not(.has-header):not(.has-tabs-top) {
+	top: 0;
+}
+.aio-empty-screen:not(.has-footer):not(.has-tabs) {
+	bottom: 0;
+}
+/*
+* Appery.io Card component
+*/
+.card {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}

@@ -1,45 +1,79 @@
-<html style="font-family: Arial">
-    <head>  
-        <link rel="stylesheet" href="assets/css/underconstruction.css">
-        <link rel="stylesheet" href="assets/css/Glyphter.css">
-        <title>LearnLooper</title>
-    </head>
-<body>
+<!DOCTYPE html>
+<html>
     
-<div class="parallax1">
-    <div style="position:absolute;  top: 15%; width: 100%">
-        <center>
-        <span style="display:block; text-align: center; position: relative; font-family: title; font-size: 100px;">
-            <!--<a class="logo">A</a><br/>-->
-            LearnLooper
-        </span>
-        <span style="display: block; text-align: center; position: relative;font-family: main; font-size: 24px;">
-        </br><i>~ easily organize your weekly learnflow ~</i>
-        </center>
-    </div>
-    <div style="position:absolute; left: 0; top:60%; text-align: center; width: 100%;">
-       <!-- <span style="text-align:justify; background-color: #000; color: #FFF; padding:20px; border-radius: 10px;">TRY IT!</span>-->
-       <a type="button" class="btn" href="#1">Learn More</a>
-    </div>
-</div>
+    <head>
+        <title>
+            index
+        </title>
+        <script src="libs/angular/angular.min.js">
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"
+        />
+        <link href="css/ionic/ionic.min.css" rel="stylesheet" />
+        <link href="css/appery-ui/appery-ui.css" rel="stylesheet" />
+        <link href="css/__aio_components.css" rel="stylesheet" />
+        <script>
+                var require = {
+            urlArgs: window.navigator.userAgent.match(/Windows Phone/i) ? undefined : "bust=1485276754"
+        };
+        </script>
+        <script data-main="app/bootstrap" src="libs/requirejs/require.js">
+        </script>
+    </head>
+    
+    <body>
+        <div ng-controller="indexController" ng-cloak ng-init="init()">
+            <ion-side-menus>
+                <ion-side-menu-content>
+                    <ion-header-bar data-aio-id="header" class="bar bar-light" ng-show="visionStatus.header">
+                        <div class="buttons">
+                            <button class="button button-block icon ion-navicon-round" menu-toggle="">
+                            </button>
+                        </div>
+                        <h1 class="title">
+                            {{activeScreen.name}}
+                        </h1>
+                        <div class="buttons">
+                        </div>
+                    </ion-header-bar>
+                    <div ng-view data-aio-id="ng-view" hasHeader hasFooter class="">
+                    </div>
+                    <ion-footer-bar data-aio-id="footer" class="bar bar-light bar-footer" ng-show="visionStatus.footer">
+                        <div class="buttons">
+                        </div>
+                        <h1 class="title">
+                            Footer
+                        </h1>
+                        <div class="buttons">
+                        </div>
+                    </ion-footer-bar>
+                </ion-side-menu-content>
+                <ion-side-menu side='left' width='275'>
+                    <div class="list">
+                        <a href="javascript:void(0)" class="item-icon-left item" ng-class="{active: activeScreen.name === &quot;Home&quot;}"
+                        menu-close="" navigate-to="Home">
+                        <i class="icon ion-home "></i>
+                        <p></p>
+                        Home
+                        </a><!--
+                        --><a href="javascript:void(0)" class="item-icon-left item" ng-class="{active: activeScreen.name === &quot;Profile&quot;}"
+                        menu-close="" navigate-to="Profile">
+                        <i class="icon ion-man "></i>
+                        <p></p>
+                        Profile
+                        </a><!--
+                        --><a href="javascript:void(0)" class="item-icon-left item" ng-class="{active: activeScreen.name === &quot;Info&quot;}"
+                        menu-close="" navigate-to="Info">
+                        <i class="icon ion-help "></i>
+                        <p></p>
+                        Info
+                        </a>
+                    </div>
+                </ion-side-menu>
+            </ion-side-menus>
+        </div>
+    </body>
 
-<div class="spacer">
-</div>
-
-<div class="parallax2" style="min-height: 80%">
-    <div style="position: absolute; top:30%; width: 100%">
-    <span style="display: block; text-align: center; position: relative">
-        
-        <a href="https://github.com/s0t7x/LearnLooper"><img src="https://img.shields.io/badge/view-GitHub-blue.svg?style=flat"></img></a>
-         <a href="https://github.com/s0t7x/LearnLooper"><img src="https://img.shields.io/badge/donate-PayPal-yellow.svg?style=flat"></img></a>
-    </span>
-    </div>
-</div>
-<div style="position: relative; display:block;background-color:#000;font-size:36px;color:#FFF">
-    <a name="1"></a>
-    <div style="padding-left: 20%; padding-right: 20%; display: block; font-size: 24px; text-align:center">
-We are working hard to get the first version working!</br>Keep up-to-date on GitHub or donate to help us getting faster. Thank you!
-</div>
-<div class="parallax2" style="min-height: 20%"></div>
-</body>
 </html>
