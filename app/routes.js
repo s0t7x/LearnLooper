@@ -49,13 +49,13 @@ define(['require'], function(require) {
         default_route, when: {
             '/': default_route,
             '/Home.html': {
-                c: '$Home/HomeController',
-                t: '$Home/HomeTemplate.html',
+                c: '$Main/MainController',
+                t: '$Main/MainTemplate.html',
                 d: []
             },
             '/Home.html': {
-                c: '$Home/HomeController',
-                t: '$Home/HomeTemplate.html',
+                 c: '$Main/MainController',
+                t: '$Main/MainTemplate.html',
                 d: []
             },
             '/Info.html': {

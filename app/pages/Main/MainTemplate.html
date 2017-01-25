@@ -1,9 +1,5 @@
 <div show-header="true" show-footer="true" show-top-tabs="true" show-tabs="true"
 ng-controller="Main" ng-cloak ng-init="init()" class="aio-empty-screen padding overflow-scroll">
-    <h1>
-        LearnLooper
-    </h1>
-    <ion-scroll paging="false" style="height:400px;">
         <div>
             <div class="row">
                 <div class="col">
@@ -11,119 +7,96 @@ ng-controller="Main" ng-cloak ng-init="init()" class="aio-empty-screen padding o
                         <div class="item-divider item">
                             Monday
                         </div>
-                        <div class="item">
-                            Item text
+                         <ul dnd-list="list">
+                        <li class="item" ng-repeat="item in items" ng-if="item.Day==1"  dnd-draggable="item" dnd-effect-allowed="move" dnd-moved="list.splice($index, 1)">
+                            <div class="item">
+                                <h3>{{item.Title}}</h3><br/>
+                                {{item.Desc}}
+                            </div>
+                        </li>
+                        </ul>
+                    </ul>
+                </div>
+                 <div class="col">
+                    <div class="card">
+                        <div class="item-divider item">
+                            Tuesday
                         </div>
-                        <div class="item">
-                            Item text
+                         <ul dnd-list="list">
+                        <li class="item" ng-repeat="item in items" ng-if="item.Day==2"  dnd-draggable="item" dnd-effect-allowed="move" dnd-moved="list.splice($index, 1)">
+                            <div class="item">
+                                <h3>{{item.Title}}</h3><br/>
+                                {{item.Desc}}
+                            </div>
+                        </li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="item-divider item">
+                            Wednesday
                         </div>
-                        <div class="item">
-                            Item text
-                        </div>
-                        <div class="item">
-                            Item text
-                        </div>
-                        <div class="item">
-                            Item text
-                        </div>
-                        <div class="item">
-                            Item text
-                        </div>
-                        <div class="item">
-                            Item text
-                        </div>
-                        <div class="item">
-                            Item text
-                        </div>
-                        <div class="item">
-                            Item text
-                        </div>
-                        <div class="item">
-                            Item text
+                        <div class="item" ng-repeat="item in items" ng-if="item.Day==3">
+                            <h3>{{item.Title}}</h3><br/>
+                            {{item.Desc}}
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
                         <div class="item-divider item">
-                            Header
+                            Thursday
                         </div>
-                        <div class="item">
-                            Item text
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="item-divider item">
-                            Header
-                        </div>
-                        <div class="item">
-                            Item text
+                         <div class="item" ng-repeat="item in items" ng-if="item.Day==4">
+                            <h3>{{item.Title}}</h3><br/>
+                            {{item.Desc}}
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
                         <div class="item-divider item">
-                            Header
+                            Friday
                         </div>
-                        <div class="item">
-                            Item text
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="item-divider item">
-                            Header
-                        </div>
-                        <div class="item">
-                            Item text
+<div class="item" ng-repeat="item in items" ng-if="item.Day==5">
+                            <h3>{{item.Title}}</h3><br/>
+                            {{item.Desc}}
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
                         <div class="item-divider item">
-                            Header
+                            Saturday
                         </div>
-                        <div class="item">
-                            Item text
+                        <div class="item" ng-repeat="item in items" ng-if="item.Day==6">
+                            <h3>{{item.Title}}</h3><br/>
+                            {{item.Desc}}
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
                         <div class="item-divider item">
-                            Header
+                            Sunday
                         </div>
-                        <div class="item">
-                            Item text
+                        <div class="item" ng-repeat="item in items" ng-if="item.Day==7">
+                            <h3>{{item.Title}}</h3><br/>
+                            {{item.Desc}}
                         </div>
                     </div>
                 </div>
             </div>
+
+        <footer style="position: absolute; bottom: 0; width: 100%">
+            <div style="padding: 10px; display: block; text-align: center">
+            <p ><button type="button" class="btn btn-default">Left</button></p>
+      </div>
+    </footer>
+            
+
+
         </div>
-    </ion-scroll>
-    <div>
-        <div class="row">
-            <div class="col">
-                <h3>
-                    Text
-                </h3>
-                <button class="button button-block">
-                    Button
-                </button>
-            </div>
-            <div class="col">
-                <p>
-                    Text
-                </p>
-                <button class="button button-block">
-                    Button
-                </button>
-            </div>
-        </div>
-    </div>
+   
 </div>
