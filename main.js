@@ -1,40 +1,30 @@
-'use strict';
+var app = angular.module("app", ["ngRoute", "dndLists"])
+    .config(function($routeProvider) {
+        $routeProvider
+            .when('/simple', {
+                templateUrl: './views/simple/simple-frame.html',
+                controller: 'SimpleDemoController'
+            })
+            .otherwise({redirectTo: '/simple'});
+    })
 
-var App = angular.module('app', ['ngRoute'])
+    .directive('navigation', function($rootScope, $location) {
+        return {
+            template: '<li ng-repeat="option in options" ng-class="{active: isActive(option)}">' +
+                      '    <a ng-href="{{option.href}}">{{option.label}}</a>' +
+                      '</li>',
+            link: function (scope, element, attr) {
+                scope.options = [
+                    {label: "Simple Test", href: "#/simple"}
+                ];
 
-  .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-    // $locationProvider.hashPrefix('!');
+                scope.isActive = function(option) {
+                    return option.href.indexOf(scope.location) === 1;
+                };
 
-    $routeProvider
-    .when('/', {
-        templateUrl: './views/nice.html',
-        controller: 'Overview',
-        title: "Overview"
-      })
-      .when('/about-us', {
-        templateUrl: './views/about.html',
-        controller: 'ViewCtrl',
-        title: "about"
-      })
-      .otherwise( { redirectTo: '/' } );
-
-    // $routeProvider.otherwise({redirectTo: '/view1'});
-  }])
-  ;
-
-
-App.controller('Overview', function ViewCtrl($scope) {
-    $scope.Weekdays = [
-      "Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday", "Sunday"
-    ]
-});
-
-App.controller('View2Ctrl', function ViewCtrl($scope) {
-
-});
-
-App.run(['$rootScope', function($rootScope) {
-    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-        $rootScope.title = current.$$route.title;
+                $rootScope.$on("$locationChangeSuccess", function(event, next, current) {
+                    scope.location = $location.path();
+                });
+            }
+        };
     });
-}]);
